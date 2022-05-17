@@ -20,7 +20,7 @@ class BookshelfSerializer(serializers.ModelSerializer):
         fields = ('name',)
 
 
-class LinkSerializer(serializers.ModelSerializer):
+class FormatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Format
         fields = ('url', 'mime_type')
@@ -37,7 +37,7 @@ class OutputSerializer(serializers.ModelSerializer):
     authors = AuthorSerializer(many=True, read_only=True)
     bookshelves = BookshelfSerializer(many=True, read_only=True)
     languages = LanguageSerializer(many=True, read_only=True)
-    formats = LinkSerializer(many=True)
+    formats = FormatSerializer(many=True)
 
     class Meta:
         model = Book
