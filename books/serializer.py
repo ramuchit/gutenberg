@@ -41,4 +41,4 @@ class OutputSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ('id', 'download_count', 'title', 'subjects', 'authors', 'languages', 'bookshelves', 'formats')
+        fields = ('title', 'subjects', 'authors', 'languages', 'bookshelves', 'formats')
